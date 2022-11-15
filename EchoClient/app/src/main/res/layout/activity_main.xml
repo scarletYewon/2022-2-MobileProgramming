@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editIP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:digits="0123456789"
+            android:hint="IPv4 주소 입력"
+            android:inputType="number"
+            android:text="127.0.0.1"/>
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="연결"/>
+        <Button
+            android:id="@+id/btnQuit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="종료"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="데이터 입력"
+            android:singleLine="true"/>
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:onClick="mOnClick"
+            android:text="보내기"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/textOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20213047 이예원"/>
+</LinearLayout>
